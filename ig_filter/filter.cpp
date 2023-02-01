@@ -54,3 +54,13 @@ void general_filter::dark_img(Mat &srcImage){
     imshow("暗調濾鏡",srcImage);
     waitKey();
 }
+
+void general_filter::nice_skin(Mat &srcImage){
+    int value = 40;
+    Mat new_img;
+    bilateralFilter(srcImage, new_img, value, value * 2, value / 2);
+    cout << "[INFO] 美顏成功！" << endl;
+
+    imshow("美顏濾鏡", new_img);
+    waitKey();
+}

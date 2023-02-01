@@ -11,6 +11,7 @@ class general_filter{
     public:
         void ghost_filter(Mat& img);
         void dark_img(Mat& img);
+        void nice_skin(Mat& img);
 
 };
 
